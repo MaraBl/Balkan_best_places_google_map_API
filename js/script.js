@@ -18,10 +18,10 @@ var flkty = new Flickity( elem, {
 var restartButton = document.querySelector('.restartButton');
 
 restartButton.addEventListener( 'click', function() {
-  flkty.select( 0 );;
+  flkty.select( 0 );
 });
 
-var progressBar = document.querySelector('.progress-bar')
+var progressBar = document.querySelector('.progress-bar');
 
 flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
