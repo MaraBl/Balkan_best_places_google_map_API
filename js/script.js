@@ -1,4 +1,22 @@
 
+//mustache
+
+var templateListItem = document.getElementById('template-list-item').innerHTML;
+Mustache.parse(templateListItem);
+
+var listItems='';
+
+for(var i = 0; i < carouselData.length; i++){
+  listItems += Mustache.render(templateListItem, carouselData[i]);
+}
+
+var results = document.getElementById('results');
+
+results.insertAdjacentHTML('beforeend', listItems);
+
+
+//fickity
+
 var elem = document.querySelector('.main-carousel');
 
 var flkty = new Flickity( elem, {
