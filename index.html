@@ -28,33 +28,44 @@
                 image: 'https://images.unsplash.com/photo-1502824420498-012d4c4f0c42?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
                 title: 'Montenegro',
                 description: 'Old town and Kotor bay',
+                coords: {lat: 42.424925, lng: 18.770962},
             },
             {
                 image: 'https://images.pexels.com/photos/2345863/pexels-photo-2345863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 
                 title: 'Croatia',
-                description: 'Favourite holiday destination',
+                description: 'Split - favourite holiday destination',
+                coords: {lat: 43.507511, lng: 16.440153},
             },
             {
                 image: 'https://images.unsplash.com/photo-1519429753079-3b0f0a95dea8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80', 
                 title: 'Serbia',
                 description: 'Belgrade - capital city',
+                coords: {lat: 44.791666, lng: 20.441761},
             },
             {
                 image: 'https://images.pexels.com/photos/210536/pexels-photo-210536.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260', 
                 title: 'Slovenia',
-                description: 'Beautiful mountains',
+                description: 'Triglav National Park',
+                coords: {lat: 46.341661, lng: 13.932450},
             },
             {
                 image: 'https://images.unsplash.com/photo-1504778774501-536858ad3ebe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1378&q=80', 
                 title: 'Sarajevo ',
                 description: 'Mix of culture and religions',
+                coords: {lat: 43.854918, lng: 18.408982},
             }
         ];
         </script>
         <div class="progress-bar"></div>
+
+        <div id="map"></div>
+        <p id="infos"></p>
+    
+        
         <script src="vendor/flickity.pkgd.min.js"></script>
         <script src="vendor/hash.js"></script>
         <script src="vendor/mustache.js"></script>
         <script src="js/script.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy4JbmHz_xzwmBAJbvKs_X07741xBreIs&callback=initMap"></script>
     </body>
 </html>

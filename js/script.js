@@ -45,3 +45,18 @@ flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
 });
+
+//google maps
+
+window.initMap = function() {
+
+  var map = new google.maps.Map(
+  document.getElementById('map'), {zoom: 8, center: carouselData[0].coords});
+  
+    for(var i = 0; i < carouselData.length; i++) {
+      marker = new google.maps.Marker({
+        position: carouselData[i].coords,
+        map: map
+      });
+    }
+}
