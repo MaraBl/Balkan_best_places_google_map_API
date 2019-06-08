@@ -49,14 +49,23 @@ flkty.on( 'scroll', function( progress ) {
 //google maps
 
 window.initMap = function() {
-
-  var map = new google.maps.Map(
-  document.getElementById('map'), {zoom: 8, center: carouselData[0].coords});
+  var marker = [];
   
-    for(var i = 0; i < carouselData.length; i++) {
-      marker = new google.maps.Marker({
-        position: carouselData[i].coords,
-        map: map
-      });
-    }
+  var map = new google.maps.Map(
+  document.getElementById('map'), {zoom: 5, center: carouselData[0].coords});
+  
+  for(var i = 0; i < carouselData.length; i++){
+    marker.push(new google.maps.Marker({
+    position: carouselData[i].coords,
+    map: map,
+    id: i
+    }));    
+    marker[i].addListener('click', function(){
+      flkty.select(this.id);
+    });
+  }
+  flkty.on( 'change', function( index ) {
+    map.panTo(carouselData[index].coords);
+    map.setZoom(9);
+  });
 }
