@@ -6,7 +6,7 @@
 
 .carousel-cell h1 { font-size: 70px; color: white; text-shadow: 2px 2px 5px #000000; }
 
-.carousel-cell p { font-size: 50px; color: white; text-shadow: 2px 2px 5px #000000; }
+.carousel-cell p { font-size: 40px; color: white; text-shadow: 2px 2px 5px #000000; }
 
 .button { position: absolute; top: 10px; left: 10px; background-color: darkgrey, color: #fff;}
 
